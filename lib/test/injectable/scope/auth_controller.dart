@@ -1,2 +1,2 @@
-@Injectable(scope: 'auth')
-class AuthController {}
+// @Injectable(scope: 'auth')
+// class AuthController {}
