@@ -10,6 +10,6 @@ class PageConfig {
     GetPage(
       name: "/home",
       page: () => const HomeScreen(),
-    )
+    ),
   };
 }

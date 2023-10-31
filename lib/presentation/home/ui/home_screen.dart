@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pos_5/presentation/home/get_x/home_controller.dart';
 import 'package:pos_5/test/injectable/cc_getx/cc_getx.dart';
 
-class HomeScreen extends CcGetView<HomeController> {
+class HomeScreen extends CGetView<HomeController> {
   const HomeScreen({super.key});
 
   @override
