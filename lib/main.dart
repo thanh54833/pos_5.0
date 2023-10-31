@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:pos_5/presentation/home/ui/home_screen.dart';
 import 'package:pos_5/test/injectable/injector/injector.dart';
+
+import 'core/config/page.dart';
 
 void main() {
   configureDependencies();
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       initialRoute: "/home",
-
+      getPages: PageConfig.instance.pages.toList(),
     );
   }
 }
