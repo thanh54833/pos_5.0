@@ -7,6 +7,8 @@ class HomeScreen extends CcGetView<HomeController> {
 
   @override
   Widget build(BuildContext context) {
+
+    controller.serviceA.value;
     return Scaffold(
       body: Center(
         child: Column(

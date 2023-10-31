@@ -9,6 +9,5 @@ final getIt = GetIt.instance;
   initializerName: 'init', // default
   preferRelativeImports: true, // default
   asExtension: true, // default
-  generateForDir: ["/generator"],
 )
 void configureDependencies() => getIt.init();
