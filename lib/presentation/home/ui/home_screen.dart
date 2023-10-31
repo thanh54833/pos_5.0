@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pos_5/presentation/home/get_x/home_controller.dart';
-import 'package:pos_5/presentation/screen_1/screen_1_controller.dart';
 import 'package:pos_5/presentation/screen_2/screen_2_controller.dart';
 import 'package:pos_5/test/injectable/cc_getx/cc_getx.dart';
 import 'package:pos_5/test/injectable/injector/injector.dart';
@@ -19,15 +18,17 @@ class HomeScreen extends CGetView<HomeController> {
           children: <Widget>[
             InkWell(
               onTap: () async {
-                await Get.toNamed("/screen_1");
+                // await Get.toNamed("/screen_1");
+                //
+                // 2.delay(
+                //   () {
+                //     var name = getIt<Screen1Controller>().name;
+                //
+                //     print("name :.. $name");
+                //   },
+                // );
 
-                2.delay(
-                  () {
-                    var name = getIt<Screen1Controller>().name;
-
-                    print("name :.. $name");
-                  },
-                );
+                controller.onTap();
               },
               child: Container(
                 height: 100,
