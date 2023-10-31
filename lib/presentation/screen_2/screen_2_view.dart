@@ -8,7 +8,7 @@ class Screen2View extends CGetView<Screen2Controller> {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      backgroundColor: Colors.grey,
+      backgroundColor: Colors.blue,
       body: Center(
         child: Text(
           "Screen 1",
