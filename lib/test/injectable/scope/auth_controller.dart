@@ -5,5 +5,3 @@ class AuthController {}
 
 @Singleton(scope: 'auth')
 class AuthController2 {}
-
-
