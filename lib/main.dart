@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:injectable/injectable.dart';
+import 'package:pos_5/test/injectable/cc_getx/cc_getx.dart';
 import 'package:pos_5/test/injectable/injector/injector.dart';
 
 void main() {
@@ -18,14 +20,24 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: HomeScreen(),
+      initialRoute: "/home",
+      getPages: [
+        GetPage(
+          name: "/home",
+          page: () => const HomeScreen(),
+          binding: BindingsBuilder.put(
+            () => HomeController(),
+          ),
+        )
+      ],
     );
   }
 }
 
-class HomeController extends GetxController {}
+@singleton
+class HomeController extends ViewController {}
 
-class HomeScreen extends GetView<HomeController> {
+class HomeScreen extends CcGetView<HomeController> {
   const HomeScreen({super.key});
 
   @override
