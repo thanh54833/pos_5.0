@@ -7,12 +7,13 @@ class Screen1View extends CGetView<Screen1Controller> {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    print("Screen1View :..");
+    return Scaffold(
       backgroundColor: Colors.grey,
       body: Center(
         child: Text(
-          "Screen 1",
-          style: TextStyle(
+          controller.name,
+          style: const TextStyle(
             color: Colors.white,
           ),
         ),

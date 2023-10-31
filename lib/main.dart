@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       initialRoute: "/home",
-      getPages: PageConfig.instance.pages.toList(),
+      getPages: PageConfig.instance.screens,
     );
   }
 }

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pos_5/presentation/home/get_x/home_controller.dart';
+import 'package:pos_5/presentation/screen_1/screen_1_controller.dart';
+import 'package:pos_5/presentation/screen_2/screen_2_controller.dart';
 import 'package:pos_5/test/injectable/cc_getx/cc_getx.dart';
 
 class HomeScreen extends CGetView<HomeController> {
@@ -8,7 +10,6 @@ class HomeScreen extends CGetView<HomeController> {
 
   @override
   Widget build(BuildContext context) {
-    controller.serviceA.value;
     return Scaffold(
       body: Center(
         child: Column(
@@ -16,8 +17,11 @@ class HomeScreen extends CGetView<HomeController> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             InkWell(
-              onTap: () {
-                Get.toNamed("/screen_1");
+              onTap: () async {
+                await Get.toNamed("/screen_1");
+                var name = Get.find<Screen1Controller>().name;
+
+                print("name :.. $name");
               },
               child: Container(
                 height: 100,
@@ -25,12 +29,20 @@ class HomeScreen extends CGetView<HomeController> {
                 color: Colors.red,
               ),
             ),
-            Container(
-              height: 100,
-              width: 300,
-              color: Colors.blue,
-              margin: const EdgeInsets.only(
-                top: 10,
+            InkWell(
+              onTap: () async {
+                await Get.toNamed("/screen_2");
+                var name = Get.find<Screen2Controller>().screenName;
+
+                print("name :.. $name");
+              },
+              child: Container(
+                height: 100,
+                width: 300,
+                color: Colors.blue,
+                margin: const EdgeInsets.only(
+                  top: 10,
+                ),
               ),
             ),
           ],
