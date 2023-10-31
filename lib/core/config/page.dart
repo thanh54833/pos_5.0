@@ -7,6 +7,8 @@ import 'package:pos_5/presentation/screen_1/screen_1_view.dart';
 import 'package:pos_5/presentation/screen_2/screen_2_view.dart';
 import 'package:pos_5/test/injectable/injector/injector.dart';
 
+import '../../presentation/screen_2/screen_2_controller.dart';
+
 class PageConfig {
   PageConfig._();
 
@@ -33,9 +35,6 @@ class PageConfig {
     GetScreen(
       name: "/screen_1",
       page: () => const Screen1View(),
-      // binding: BindingsBuilder.put(
-      //   () => Screen1Controller(),
-      // ),
       binding: BindingsBuilder.put(() => getIt<Screen1Controller>()),
       gaScreenName: 'screen_1',
     ),
@@ -43,6 +42,7 @@ class PageConfig {
       name: "/screen_2",
       page: () => const Screen2View(),
       gaScreenName: 'screen_2',
+      binding: BindingsBuilder.put(() => getIt<Screen2Controller>()),
     ),
   ];
 }

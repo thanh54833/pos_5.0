@@ -27,7 +27,7 @@ extension GetItInjectableX on _i1.GetIt {
       environmentFilter,
     );
     gh.factory<_i3.Screen1Controller>(() => _i3.Screen1Controller());
-    gh.factory<_i4.Screen2Controller>(() => _i4.Screen2Controller());
+    gh.singleton<_i4.Screen2Controller>(_i4.Screen2Controller());
     gh.factory<_i5.ServiceA>(() => _i5.ServiceA());
     gh.factory<_i5.HomeController>(
         () => _i5.HomeController(serviceA: gh<_i5.ServiceA>()));

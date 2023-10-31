@@ -1,5 +1,7 @@
 import 'package:flutter/foundation.dart';
+import 'package:get/get.dart';
 import 'package:injectable/injectable.dart';
+import 'package:pos_5/presentation/screen_2/screen_2_controller.dart';
 import 'package:pos_5/test/injectable/cc_getx/cc_getx.dart';
 
 @injectable
@@ -27,6 +29,11 @@ class HomeController extends ViewController {
       print("HomeController -> onReady");
     }
     super.onReady();
+  }
+
+  onTap() async {
+    Get.put(Screen2Controller());
+    Get.find<Screen2Controller>();
   }
 
   @override
