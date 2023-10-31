@@ -33,8 +33,10 @@ class HomeController extends ViewController {
 
   onTap() async {
     print("onTap :..");
+
     Get.lazyPut(() => Screen2Controller(), tag: "screen_2_controller");
     Get.find<Screen2Controller>(tag: "screen_2_controller");
+    
   }
 
   @override
