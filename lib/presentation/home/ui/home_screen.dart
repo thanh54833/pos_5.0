@@ -40,6 +40,8 @@ class HomeScreen extends CGetView<HomeController> {
               onTap: () async {
                 await Get.toNamed("/screen_2");
 
+                //GetInstance().put();
+
                 2.delay(
                   () {
                     var name = getIt<Screen2Controller>().screenName;
